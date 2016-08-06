@@ -5,7 +5,11 @@ class Footer extends Component {
      return {
        root: {
          backgroundColor: '#212121',
-         height: '200px'
+         height: '200px',
+         textAlign:'center',
+         fontSize:'50px',
+         fontWeight:'bold',
+         lineHeight:'200px'
        }
      }
    }

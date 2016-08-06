@@ -5,26 +5,30 @@ import UserInfo from './UserInfo';
 import Repos from './Repos';
 import github from './github';
 
+import CircularProgress from 'material-ui/CircularProgress';
 
 class GithubAccount extends Component {
+
   constructor(props) {
     super(props);
     this.state = {
       user: {},
+      wait:true
     };
   }
   componentDidMount() {
-    github.getGithubInfo('happypeter')
+    github.getGithubInfo('s594475')
       .then((data) => {
         this.setState({
           user: data.user,
-          repos: data.repos
+          repos: data.repos,
+          wait:false
         });
       });
   }
   render(){
     let GitHubInfo;
-
+    let x = <CircularProgress size={2} style={{marginLeft:'50%'}}/>;
     if(!isEmpty(this.state.user)) {
       GitHubInfo = (
         <div>
@@ -34,11 +38,15 @@ class GithubAccount extends Component {
       );
     }
     return(
-      <div className='account'>
-        <Card className="content">
-          { GitHubInfo }
-        </Card>
-      </div>
+      <div>
+        {this.state.wait ? x :
+          <div className='account'>
+            <Card className="content">
+              { GitHubInfo }
+            </Card>
+          </div>
+        }
+    </div>
     )
   }
 }
