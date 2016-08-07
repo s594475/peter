@@ -17,3 +17,5 @@ import React, { Component } from 'react';
 ```
 
 why: http://haoduoshipin.com/v/179
+
+### params from react router 路由
