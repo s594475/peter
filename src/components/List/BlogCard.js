@@ -4,7 +4,8 @@ import {hashHistory} from 'react-router';
 
 class BlogCard extends Component {
   handleClick(){
-      hashHistory.push('blog/git')
+    let address = `/blog/${this.props.url}`;
+    hashHistory.push(address);
   }
   render(){
 

@@ -31,7 +31,7 @@ class List extends Component {
     var blogCards = [];
     map((b) =>  {
                   blogCards.push(
-                    <BlogCard title={b.title} date={b.date} index={b.index} key={Math.random()}/>
+                    <BlogCard title={b.title} date={b.date} index={b.index} url={b.name} key={Math.random()}/>
                   );
                 },
         this.state.posts

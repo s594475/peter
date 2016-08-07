@@ -11,7 +11,7 @@ class Post extends React.Component {
 
   componentDidMount(){
       console.log("enenn")
-    let address = `https://raw.githubusercontent.com/happypeter/big-demo/master/posts/git-tips.md?v=${Math.random()}`
+    let address = `https://raw.githubusercontent.com/s594475/peter/master/posts/${this.props.params.title}.md?v=${Math.random()}`
     axios.get(address).then((res) => {
 
       this.setState({
@@ -25,7 +25,7 @@ class Post extends React.Component {
     let content = marked(this.state.text!='' ? this.state.text : '稍等.....')
     return(
       <div>
-          {this.props.params.title}
+
           <div>
                <span dangerouslySetInnerHTML={{__html: content}} />
           </div>
