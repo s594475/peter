@@ -18,6 +18,8 @@
     "css-loader": "^0.23.1",
     "eventsource-polyfill": "^0.9.6",
     "express": "^4.14.0",
+    "highlight": "^0.2.4",
+    "highlight.js": "^9.5.0",
     "react": "^15.2.1",
     "react-dom": "^15.2.1",
     "react-router": "^2.6.1",

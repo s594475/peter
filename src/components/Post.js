@@ -1,6 +1,7 @@
 import React, { PropTypes } from 'react';
 import axios from 'axios';
 import marked from 'marked';
+import highlight from 'highlight.js'
 class Post extends React.Component {
   constructor(){
     super();
@@ -22,11 +23,17 @@ class Post extends React.Component {
   }
 
   render(){
+    marked.setOptions({
+        highlight: function (code) {
+          return highlight.highlightAuto(code).value;
+        }
+      })
     let content = marked(this.state.text!='' ? this.state.text : '稍等.....')
+
     return(
       <div>
 
-          <div>
+          <div className='post-content'>
                <span dangerouslySetInnerHTML={{__html: content}} />
           </div>
       </div>

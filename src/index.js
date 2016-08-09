@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import './style/main.css';
+import './style/hljs.css';
 import {render} from 'react-dom';
 import {Router,hashHistory} from 'react-router';
 import routes from './routes.js';
