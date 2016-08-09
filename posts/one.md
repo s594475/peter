@@ -1,3 +1,5 @@
 # Git tips
 
-*hello*nice too meet you 
+[百度](http://baidu.com)
+
+*hello*nice too meet you

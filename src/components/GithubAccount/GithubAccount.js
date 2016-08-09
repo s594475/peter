@@ -4,7 +4,7 @@ import isEmpty from 'lodash/isEmpty';
 import UserInfo from './UserInfo';
 import Repos from './Repos';
 import github from './github';
-
+import Echarts from './Echarts'
 import CircularProgress from 'material-ui/CircularProgress';
 
 class GithubAccount extends Component {
@@ -44,6 +44,10 @@ class GithubAccount extends Component {
             <Card className="content">
               { GitHubInfo }
             </Card>
+            <Card className="content">
+                <Echarts />
+            </Card>
+
           </div>
         }
     </div>
