@@ -1,5 +1,5 @@
-import React, { PropTypes } from 'react'
-
+import React, { PropTypes } from 'react';
+import Work from './Work'
 class Home extends React.Component {
   render () {
     let styles={
@@ -17,11 +17,14 @@ class Home extends React.Component {
       }
     }
     return(
-      <div style={styles.root}>
-             <h1 style={styles.title}>WELCOME</h1>
-             <h1 style={{paddingLeft:'44%',margin:'0'}}>My Word!</h1>
-
-      </div>
+      <div>
+          <div style={styles.root}>
+                 <h1 style={styles.title}>WELCOME</h1>
+                 <h1 style={{paddingLeft:'44%',margin:'0'}}>My Word!</h1>
+          </div>
+          <h1 style={{textAlign:'center',fontSize:'30px'}}>My Work!</h1>
+          <Work />
+    </div>
     )
   }
 }
